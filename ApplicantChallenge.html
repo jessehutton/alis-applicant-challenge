@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Test</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="flex-wrapper">
+                <form action="" name="contact-form" id="contact-form">
+                    <a id="select-language" href="#">Español</a>
+                    <h2 id="contact-title">Contact Information</h2>
+                    <div class="flex-row">
+                        <select name="salutation" id="salutation" required>
+                            <option disabled selected value></option>
+                            <option value="Dr.">Dr.</option>
+                            <option value="Miss">Miss</option>
+                            <option value="Mr.">Mr.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Ms.">Ms.</option>
+                            <option value="Mx.">Mx.</option>
+                        </select>
+                        <label for="firstname">First Name</label>
+                        <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                        <label for="lastname">Last Name</label>
+                        <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+                    </div>
+                    <div class="flex-row pt-10">
+                        <label for="address">Address</label>
+                        <input type="text" name="address" id="address" placeholder="Address" class="w-100" required>
+                    </div>
+                    <div class="flex-row pt-10">
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" placeholder="City" class="w-100" required>
+                        <label for="state">State</label>
+                        <input type="text" name="state" id="state" placeholder="State" size="4" required>
+                        <label for="zip">Zip</label>
+                        <input type="text" name="zip" id="zip" placeholder="Zip" size="10" required>
+                    </div>
+                    <div class="flex-row pb-20 pt-10">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" name="phone" id="phone" placeholder="(000)000-0000" size="10" required>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email" placeholder="someone@email.com" class="w-100" required>
+                    </div>
+                    <h2 id="questions-title">Questions</h2>
+                    <label for="who" class="pb-5 strong">Who?</label>
+                    <input type="text" name="who" id="who" placeholder="Let us know who..." required>
+                    <label for="what" class="pt-20 pb-5 strong">What?</label>
+                    <textarea type="text" name="what" id="what" maxlength="2000" rows="4" cols="50" placeholder="Let us know what..." required></textarea>
+                    <div class="flex-row">
+                        <div class="flex-col flex-col-70">
+                            <span id="where-text" class="pt-20 pb-5 strong">Where?</span>
+                            <div class="flex-row">
+                                <label for="where_city">City</label>
+                                <input type="text" name="where_city" id="where_city" placeholder="City" class="w-100" required>
+                                <label for="where_state">State</label>
+                                <input type="text" name="where_state" id="where_state" placeholder="State" size="4" required>
+                            </div>
+                        </div>
+                        <div class="flex-col flex-col-30">
+                            <label for="when" class="pt-20 pb-5 strong">When?</label>
+                            <input type="text" name="when" id="when" size="8" required>
+                        </div>
+                    </div>
+                    <div class="flex-row pt-20">
+                        <div class="flex-col flex-col-50">
+                            <div class="flex-row fj-left">
+                                <span id="witness-text" class="pb-5 strong">Do you have a witness?</span>
+                                <label class="toggleSwitch" for="witness" onclick="">
+                                    <input type="checkbox" name="witness" id="witness"/>
+                                    <span>
+                                        <span class="text-no">No</span>
+                                        <span class="text-yes">Yes</span>
+                                    </span>
+                                    <a></a>
+                                </label>
+                            </div>
+                            <div id="witness-details" class="flex-col" style="display: none;">
+                                <label for="witness_firstname">Witnesses First Name</label>
+                                <input type="text" name="witness_firstname" id="witness_firstname" placeholder="First Name" required>
+                                <label for="witness_lastname">Witness Last Name</label>
+                                <input type="text" name="witness_lastname" id="witness_lastname" placeholder="Last Name" required>
+                                <label for="witness_phone">Witness Phone Number</label>
+                                <input type="text" name="witness_phone" id="witness_phone" placeholder="(000)000-0000" size="10" required>
+                            </div>
+                        </div>
+                        <div class="flex-col flex-col-50">
+                            <div class="flex-row fj-left">
+                                <span id="attorney-text" class="pb-5 strong">Do you have an attorney?</span>
+                                <label class="toggleSwitch" for="attorney" onclick="">
+                                    <input type="checkbox" name="attorney" id="attorney"/>
+                                    <span>
+                                        <span class="text-no">No</span>
+                                        <span class="text-yes">Yes</span>
+                                    </span>
+                                    <a></a>
+                                </label>
+                            </div>
+                            <div id="attorney-details" class="flex-col" style="display: none;">
+                                <label for="attorney_name">Attorney Name</label>
+                                <input type="text" name="attorney_name" id="attorney_name" placeholder="Attorney Name" required>
+                                <label for="attorney_practicename">Attorney Practice Name</label>
+                                <input type="text" name="attorney_practicename" id="attorney_practicename" placeholder="Practice Name" required>
+                                <label for="attorney_website">Attorney Website</label>
+                                <input type="text" name="attorney_website" id="attorney_website" placeholder="https://www.example.com" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error pt-10"><span></span></div>
+                    <button id="submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script src="./scripts.js"></script>
+    </footer>
+</html>

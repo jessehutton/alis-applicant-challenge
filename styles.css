@@ -1,0 +1,263 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2em;
+    background-color: #2E5EAA;
+}
+.container{
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.flex-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#select-language {
+    text-align: right;
+    text-decoration: none;
+}
+
+/*  Toggle Switch  */
+.toggleSwitch span span {
+    display: none;
+}
+.toggleSwitch {
+    display: inline-block;
+    position: relative;
+    overflow: visible;
+    padding: 0;
+    cursor: pointer;
+    width: 80px;
+    height: 36px;
+}
+.toggleSwitch * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.toggleSwitch label,
+.toggleSwitch > span {
+    line-height: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.toggleSwitch input:focus ~ a,
+.toggleSwitch input:focus + label {
+    outline: none;
+}
+.toggleSwitch label {
+    position: relative;
+    z-index: 3;
+    display: block;
+    width: 100%;
+}
+.toggleSwitch input {
+    position: absolute;
+    opacity: 0;
+    z-index: 5;
+}
+.toggleSwitch > span {
+    position: absolute;
+    left: -50px;
+    width: 100%;
+    margin: 0;
+    padding-right: 50px;
+    text-align: left;
+    white-space: nowrap;
+    height: 38px;
+    line-height: 37px;
+}
+.toggleSwitch > span span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    display: block;
+    width: 50%;
+    margin-left: 50px;
+    text-align: left;
+    width: 100%;
+    left: 15%;
+    top: -1px;
+    opacity: 0;
+    font-size: 1em;
+}
+.toggleSwitch a {
+    position: absolute;
+    right: 50%;
+    z-index: 4;
+    display: block;
+    height: 100%;
+    padding: 0;
+    left: 2px;
+    background-color: #fff;
+    border: 1px solid #CCC;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    width: 36px;
+}
+.toggleSwitch > span span:first-of-type {
+    color: #ccc;
+    opacity: 1;
+    left: 50%;
+}
+.toggleSwitch > span:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50px;
+    top: -2px;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.toggleSwitch input:checked ~ a {
+    border-color: #fff;
+    margin-left: -8px;
+    left: 52px;
+}
+.toggleSwitch input:checked ~ span:before {
+    border-color: #0097D1;
+    box-shadow: inset 0 0 0 30px #0097D1;
+}
+.toggleSwitch input:checked ~ span span:first-of-type {
+    opacity: 0;
+}
+.toggleSwitch input:checked ~ span span:last-of-type {
+    opacity: 1;
+    color: #fff;
+}
+.toggleSwitch>label.error {
+    display: none;
+}
+/*  End Toggle Switch  */
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: #B4E1FF;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+#contact-form h2 {
+    margin: 0 0 15px;
+}
+
+#contact-form button {
+    margin-top: 20px;
+    font-size: 1.4em;
+    padding: 10px;
+    border-radius: 15px;
+    border-color: #0097D1;
+    box-shadow: inset 0 0 0 30px #0097D1;
+    color: #fff;
+    font-weight: 600;
+}
+
+input, select, textarea {
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px inset #000000;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.3);
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    gap: 20px;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-col-30 {
+    flex: 30%;
+}
+.flex-col-50 {
+    flex: 50%;
+    align-self: start;
+}
+.flex-col-70 {
+    flex: 70%;
+}
+
+.p-10 {
+    padding: 5px 10px;
+}
+.p-20{
+    padding: 10px 20px;
+}
+
+.w-100{
+    width: 100%;
+}
+
+.pt-10{
+    padding-top: 10px;
+}
+.pt-20{
+    padding-top: 20px;
+}
+
+.pb-5 {
+    padding-bottom: 5px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+
+.fj-left{
+    justify-content: left;
+}
+#ui-datepicker-div {
+    z-index: 10!important;
+}
+.strong {
+    font-weight: bold;
+}
+input.error, select.error, textarea.error  {
+    border: 1px inset #FF0000;
+    -moz-box-shadow:    inset 0 0 5px #FF0000;
+    -webkit-box-shadow: inset 0 0 5px #FF0000;
+    box-shadow:         inset 0 0 5px #FF0000;
+}
+#witness-details label, #attorney-details label {
+    padding: 5px 0;
+}
+.error > span {
+    color: #FF0000;
+    font-weight: 600;
+}
+label.error {
+    display: none!important;
+}
+
+@media only screen and (max-width: 960px) {
+    .flex-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .w-100 {
+        width: 95%;
+    }
+    input {
+        width: 95%;
+    }
+}
