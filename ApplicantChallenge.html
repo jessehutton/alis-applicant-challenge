@@ -52,6 +52,7 @@
                     <input type="text" name="who" id="who" placeholder="Let us know who..." required>
                     <label for="what" class="pt-20 pb-5 strong">What?</label>
                     <textarea type="text" name="what" id="what" maxlength="2000" rows="4" cols="50" placeholder="Let us know what..." required></textarea>
+                    <div id="char-limit">*2000 Character Limit</div>
                     <div class="flex-row">
                         <div class="flex-col flex-col-70">
                             <span id="where-text" class="pt-20 pb-5 strong">Where?</span>
@@ -72,7 +73,8 @@
                             <div class="flex-row fj-left">
                                 <span id="witness-text" class="pb-5 strong">Do you have a witness?</span>
                                 <label class="toggleSwitch" for="witness" onclick="">
-                                    <input type="checkbox" name="witness" id="witness"/>
+                                    <input type="hidden" value="no" name="witness">
+                                    <input type="checkbox" name="witness" id="witness" value="yes"/>
                                     <span>
                                         <span class="text-no">No</span>
                                         <span class="text-yes">Yes</span>
@@ -93,7 +95,8 @@
                             <div class="flex-row fj-left">
                                 <span id="attorney-text" class="pb-5 strong">Do you have an attorney?</span>
                                 <label class="toggleSwitch" for="attorney" onclick="">
-                                    <input type="checkbox" name="attorney" id="attorney"/>
+                                    <input type="hidden" value="no" name="attorney">
+                                    <input type="checkbox" name="attorney" id="attorney" value="yes"/>
                                     <span>
                                         <span class="text-no">No</span>
                                         <span class="text-yes">Yes</span>
@@ -112,10 +115,11 @@
                         </div>
                     </div>
                     <div class="error pt-10"><span></span></div>
-                    <button id="submit" type="submit">Submit</button>
+                    <button id="submitBtn" type="submit">Submit</button>
                 </form>
             </div>
         </div>
+        <div id="form-data-output" style="display: none;"><button type="reset" value="Reset" onClick="window.location.reload()">RESET</button></div>
     </body>
     <footer>
         <script  src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="  crossorigin="anonymous"></script>

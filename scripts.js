@@ -43,7 +43,10 @@ $( function() {
             when: "date"
         },
         submitHandler: function(form) {
-            form.submit();
+            let data = JSON.stringify($(form).serializeArray());
+            console.log(data);
+            $('#form-data-output').text(data);
+            $('#form-data-output').show();
         },
         invalidHandler: function(event, validator) {
             var errors = validator.numberOfInvalids();
@@ -121,6 +124,7 @@ $( function() {
             $('#who').attr('placeholder', 'Háganos saber quién...');
             $('label[for="what"]').text('¿Qué?');
             $('#what').attr('placeholder', 'Háganos saber qué...');
+            $('#char-limit').text('*límite de 2000 caracteres');
             $('#where-text').text('¿Donde?');
             $('label[for="where_city"]').text('Ciudad');
             $('#where_city').attr('placeholder', 'Ciudad');
@@ -167,6 +171,7 @@ $( function() {
             $('#who').attr('placeholder', 'Let us know who...');
             $('label[for="what"]').text('What?');
             $('#what').attr('placeholder', 'Let us know what...');
+            $('#char-limit').text('*2000 Character Limit');
             $('#where-text').text('Where?');
             $('label[for="where_city"]').text('City');
             $('#where_city').attr('placeholder', 'City');
